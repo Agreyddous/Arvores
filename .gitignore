@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Arvores/tree.csv
+/Arvores/tree.csv
+*.csv
+/Arvores/tree.csv

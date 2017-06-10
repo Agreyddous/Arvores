@@ -220,3 +220,33 @@ void ShowTree(Tree tree, int collumn, int row, int offset)
             ShowTree(tree->Right, collumn + offset, row + 2, offset / 2 + 1);
     }
 }
+
+void ShowTreePreOrder(Tree tree)
+{
+    if (!IsEmpty(tree))
+    {
+        printf("%d ", tree->Content.Value);
+        ShowTreePreOrder(tree->Left);
+        ShowTreePreOrder(tree->Right);
+    }
+}
+
+void ShowTreeInOrder(Tree tree)
+{
+    if (!IsEmpty(tree))
+    {
+        ShowTreeInOrder(tree->Left);
+        printf("%d ", tree->Content.Value);
+        ShowTreeInOrder(tree->Right);
+    }
+}
+
+void ShowTreePosOrder(Tree tree)
+{
+    if (tree != NULL)
+    {
+        ShowTreePosOrder(tree->Left);
+        ShowTreePosOrder(tree->Right);
+        printf("%d ", tree->Content.Value);
+    }
+}

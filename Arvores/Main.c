@@ -39,12 +39,13 @@ void main()
             {
                 ClearTreeFile();
                 StoreTree(tree);
-                ShowMessage("No removido com sucesso");
+                printf("No com valor %d removido com sucesso", data.Value);
+                Pause();
             }
 
             else
             {
-                ShowMessage("No ja nao encontrado!");
+                ShowMessage("No nao encontrado!");
             }
         }
 
@@ -76,8 +77,15 @@ void main()
         {
             if (!IsEmpty(tree))
             {
-                printf("\t\tEsta e a arvore:");
-                ShowTree(tree, 20, 3, 10);
+                printf("\t\tEsta e a arvore: (Pressione Enter para continuar)\n");
+                printf("\n\t");
+                ShowTreePreOrder(tree);
+                printf("\n\t");
+                ShowTreeInOrder(tree);
+                printf("\n\t");
+                ShowTreePosOrder(tree);
+                printf("\n");
+                ShowTree(tree, 20, 8, 10);
                 getchar();
                 Clean();
             }
